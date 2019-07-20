@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "lib": [
+      "es2017",
+      "es2016",
+      "dom"
+    ],
+    "module": "commonjs",
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "inlineSourceMap": false,
+    "noImplicitAny": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "node"
+    ],
+    "jsx": "preserve",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "compileOnSave": true,
+  "include": [
+    "src",
+    "types"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

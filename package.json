@@ -1,0 +1,48 @@
+{
+  "name": "clipBoard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": {
+    "name": "Ayman Elkhouly",
+    "email": "elkhouly.ayman@outlook.com"
+  },
+  "repository": {
+    "url": "https://github.com/aymanElkhouly/ClipBoard"
+  },
+  "private": true,
+  "license": "MIT",
+  "keywords": [
+    "ClipBoard",
+    "system clipboard",
+    "clipBiard API",
+    "typescript"
+  ],
+  "scripts": {
+    "start": "npm run debug -- --open",
+    "debug": "parcel --port 4400 --target browser src/index.html",
+    "build": "parcel build --public-url '.' --no-source-maps --bundle-node-modules --no-content-hash src/index.html",
+    "build:demo": "npm run build -- -d demo && npm run deploy:demo",
+    "deploy:demo": "git add . && git commit -m \"Update demo\" && git push && git subtree push --prefix demo origin master",
+    "serve": "http-server -g -o -a 0.0.0.0 ./dist",
+    "predebug": "npm run clean",
+    "prebuild": "npm run clean",
+    "prettier": "prettier --write \"**/*.{js,json,css,md,ts,html}\"",
+    "clean": "rimraf dist .cache"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@types/events": "^3.0.0",
+    "@types/node": "^12.0.8",
+    "bootstrap": "^4.3.1",
+    "http-server": "^0.11.1",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.5.2"
+  }
+}
